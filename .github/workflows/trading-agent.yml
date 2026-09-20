@@ -1,0 +1,25 @@
+name: Trading AI Agent
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 3 * * 1-5"
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run trading agent
+        run: echo "RELIANCE.NS" | python app.py
