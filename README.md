@@ -1,2 +1,2 @@
-# trading-ai-agent
-AI-powered paper trading assistant
+#    run: echo "RELIANCE.NS" | python app.py      - name: Run backtest
+        run: python backtest.py
